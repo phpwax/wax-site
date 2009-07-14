@@ -58,3 +58,10 @@ production:
   #exclusions:
     #contact: "/contact/i"
     #admin: "/admin/i"
+   
+# If your using the cms, you might want to turn this on... so show image
+# requests it doesnt have to load the entire framework
+#    
+#image_cache:
+  #engine: "Image"
+  #exclude_post: "no"    
