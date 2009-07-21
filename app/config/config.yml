@@ -16,7 +16,7 @@ development:
  db:
   dbtype: mysql  
   host: localhost
-  database: investorsinexcellence
+  database: local
   username: root
 
 test:
@@ -31,9 +31,9 @@ production:
   db: 
     dbtype: mysql
     host: localhost
-    database: investorsinexcellence
-    username: investorsinexcellence
-    password: invest34excellence
+    database: local
+    username: local
+    password: password
 
 #  == Maintenance downtime == 
 #  Use to make the site unavailable to all but one ip
