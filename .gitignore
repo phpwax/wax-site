@@ -1,0 +1,6 @@
+._*
+.DS_Store
+tmp/cache*
+tmp/log*
+wax*
+plugins/cms*

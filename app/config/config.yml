@@ -1,0 +1,66 @@
+##### config.yml file use to configure applications ###
+# Environments: Setup ip sniffing to detect environments
+# 
+#  Hopefully entirely unnecessary most of the time - 
+#  Local ranges 127., 10. and 192. default to development
+
+
+# environments:
+#   development:  172.*
+#   production:   86.54.101.70
+
+
+
+# == Database configuration ==
+development:
+ db:
+  dbtype: mysql  
+  host: localhost
+  database: investorsinexcellence
+  username: root
+
+test:
+  db:
+    dbtype: mysql
+    host: localhost
+    database: app_test
+    username: root
+    password: secret
+
+production: 
+  db: 
+    dbtype: mysql
+    host: localhost
+    database: investorsinexcellence
+    username: investorsinexcellence
+    password: invest34excellence
+
+#  == Maintenance downtime == 
+#  Use to make the site unavailable to all but one ip
+#  Just comment the lines out to operate the site normally. Note that this will need to be your public ip address.
+#  Redirect gives an address to redirect all requests to.
+#  the ip can be a yaml array or a single ip - both regex 
+#maintenance: 
+  #ip:       ^127.0.0*
+  #redirect: 503.html
+
+#layout_cache:
+  #engine: "File"
+  #exclude_post: "yes"
+  #exclusions:
+    #contact: "/contact/i"
+    #admin: "/admin/i"
+    
+#view_cache:
+  #engine: "File"
+  #exclude_post: "yes"
+  #exclusions:
+    #contact: "/contact/i"
+    #admin: "/admin/i"
+   
+# If your using the cms, you might want to turn this on... so show image
+# requests it doesnt have to load the entire framework
+#    
+#image_cache:
+  #engine: "Image"
+  #exclude_post: "no"    

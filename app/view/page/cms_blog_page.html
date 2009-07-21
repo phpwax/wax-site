@@ -1,0 +1,44 @@
+<h1><?=$cms_content->title?></h1>
+<?if($cms_content->images && $cms_content->images[0] && $cms_content->images[0]->primval):?>
+  <?foreach($cms_content->images as $image):?>
+  <img src="<?=$image->permalink(140)?>" alt="image for <?=str_replace(" & ", " &amp; ", $content->title)?>" class='attached '/>
+  <?endforeach?>
+<?endif?>
+<?=$cms_content->format_content()?>
+
+<hr />
+<h4>Comments</h4>
+
+
+<?if($cms_content->comments && $cms_content->comments[0]):?>
+	<?foreach($cms_content->comments as $count=>$comment):?>
+	<?if($comment->status == 1):?>
+	<div class='row full clearfix'>
+	  <blockquote><?=$comment->comment?></blokquote>
+	  <cite> - <?=$comment->author_name?></cite>
+	</div>
+	<?endif?>
+	<?endforeach?>
+<?else:?>
+<p><em>No comments yet...</em></p>
+<?endif?>
+
+<hr />
+
+<div class='row' id="post_comment">
+	<form action="" method="post" id="comment_form">
+		<fieldset>
+			<input type="hidden" value="<?=$cms_content->primval?>" name="cms_comment[attached_to]" />			
+			<h3>Leave a comment</h3>
+			<ol>
+				<?foreach($comment_form as $field):?>
+				<?if($field->editable):?>
+					<?$field->label = ucwords(str_ireplace('author ', '', $field->label))?>
+				<li class='clearfix'><?=$field->render()?></li>
+				<?endif?>
+				<?endforeach?>
+				<li class='submit'><input type='submit' value='Post' name='cms_comment[submit]' class='input_field submit_field'/></li>
+			</ol>
+		</fieldset>
+	</form>
+</div>

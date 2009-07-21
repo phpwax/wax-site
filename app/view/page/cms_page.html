@@ -1,0 +1,7 @@
+<h1><?=$cms_content->title?></h1>
+<?if($cms_content->images && $cms_content->images[0] && $cms_content->images[0]->primval):?>
+  <?foreach($cms_content->images as $image):?>
+  <img src="<?=$image->permalink(140)?>" alt="image for <?=str_replace(" & ", " &amp; ", $content->title)?>" class='attached '/>
+  <?endforeach?>
+<?endif?>
+<?=$cms_content->format_content()?>
