@@ -7,6 +7,7 @@
 Config::set("log_info", false);
 Config::set("log_warn", false);
 Config::set("log_error", true);
+Config::set('randomise_domains', false);
 
 /************ Application Error Handling *******************************************************
 *

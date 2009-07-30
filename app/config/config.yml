@@ -90,3 +90,20 @@ production:
   #lifetime: "forever"
   #engine: "Image"
   #exclude_post: "no"    
+  
+# alternative domains to serve content from - this done via a post render hook,
+# which parses the content - make sure its not set to false in the development.php 
+# or production.php 
+#randomise_domains:
+  #exclusions:
+    #admin:"/admin/i"
+  #replace:
+    #0: "/<link[^>]*href=\"(\/.*?)\" type=\"text\/css\"[^>]*>/i"
+    #1: "/<img[^>]*src=\"(\/.*?)\"[^>]*>/i"
+    #2: "/<script[^>]*src=\"(\/.*?)\"[^>]*>/i"
+  #available_domains:
+    #0: "static1.domain.name"
+    #1: "static2.domain.name"
+    #2: "static3.domain.name"
+    #3: "static4.domain.name"
+    #4: "static5.domain.name"          
