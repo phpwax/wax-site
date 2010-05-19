@@ -1,7 +1,7 @@
 ##### config.yml file use to configure applications ###
 # Environments: Setup ip sniffing to detect environments
-# 
-#  Hopefully entirely unnecessary most of the time - 
+#
+#  Hopefully entirely unnecessary most of the time -
 #  Local ranges 127., 10. and 192. default to development
 
 
@@ -14,7 +14,7 @@
 # == Database configuration ==
 development:
  db:
-  dbtype: none  
+  dbtype: none
   host: localhost
   database: app_development
   username: root
@@ -28,11 +28,17 @@ test:
     username: root
     password: secret
 
-production: 
-  db: 
+production:
+  db:
     dbtype: mysql
     host: localhost
     database: app_production
     username: root
     password: secret
 
+
+analytics:
+  email:
+  password:
+  id:
+  tracker_id:
