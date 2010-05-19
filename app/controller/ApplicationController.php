@@ -7,5 +7,6 @@
  * Use to provide application wide methods
  **/
 
-class ApplicationController extends WaxController
-{}
+class ApplicationController extends WaxController{}
+
+?>
