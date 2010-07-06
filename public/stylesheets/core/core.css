@@ -1,94 +1,26 @@
-/* Use Yahoo reset.css to start all styles with a level playing field */
-@import url("http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css");
-
-
-
-
-body {text-align:left;}
-
-/* Basic form styling */
-/* Form styles */
-.waxform { margin: 10px; padding: 5px; }
-
-.waxform .legend { margin-bottom: 1em; }
-.waxform .legend em { color: #C00; font-style: normal; }
-
-.user_errors, .user_messages { 
-  background-color: rgb(255, 255, 204);
-  border: 1px solid rgb(255, 204, 102);
-  margin: 0px 0px 10px 0px;
-  padding: 5px 10px;
-}
-.user_errors p { margin: 0; }
-.user_errors p em { color: #C00; font-style: normal; font-weight: bold; }
-
-
-.waxform fieldset { margin: 10px 0; padding: 10px; border: #DDD 1px solid; }
-.waxform legend { font-weight: bold; color: #666; }
-
-.waxform span label { 
-  display: block;
-  border: none;
-  color: rgb(34, 34, 34);
-  font-size: 95%;
-  font-weight: bold;
-  line-height: 150%;
-  margin: 0px;
-  padding: 0px 0px 3px 0px;
-}
-.waxform span .input_field, .waxform span .textarea {
-  border-bottom: 1px solid rgb(221, 221, 221);
-  border-left: 1px solid rgb(195, 195, 195);
-  border-right: 1px solid rgb(195, 195, 195);
-  border-top: 1px solid rgb(124, 124, 124);
-  color: rgb(51, 51, 51);
-  padding:3px 2px;
-}
-.waxform span .error_field { color: #C00; }
-.waxform input.error_field { border-color: #C00; background-color: #FEF; }
-.waxform input:focus,
-.waxform input.error_field:focus, 
-.waxform textarea:focus {	background-color: #FFC; border-color: #FC6; }
-
-.waxform .error_message {color: #C00; font-size:77%; display:block; }
-.waxform span { margin-bottom:10px; display:block;}
-.waxform .submit_field {
-  display:block;
-  margin:10px 0;
-}
-.waxform .checkbox_field {float:left; margin-right:4px;vertical-align:bottom;}
-
-
-/****** Pagination and error Styles **********/
-.pagination {
-  margin:15px 0;
-  padding-bottom:15px;
-}
-.pagination li.pagination_link {
-  float:left;
-  margin-right:4px;
-  padding:3px 0;
-}
-.pagination li.pagination_link a, .pagination span {
-  padding:2px 5px;
-}
-.pagination li.pagination_link a, .pagination span.disabled {
-  border:1px solid #009EE0;
-}
-
-
-/********* END Pagination and errors ****************/
-
-
-/* Nasty clearfix hacks */
-.clearfix {display:inline-block;} 
-/* Hide from IE Mac \*/ 
-.clearfix {display:block;} 
-/* End hide from IE Mac */ 
-.clearfix:after {
-    content: "."; 
-    display: block; 
-    height: 0; 
-    clear: both; 
-    visibility: hidden;
-}
+/*
+Copyright (c) 2010,Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:http://developer.yahoo.com/yui/license.html
+version:2.8.1
+*/
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+select,input,button,textarea,button{font:99% arial,helvetica,clean,sans-serif;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+body{text-align:center;}
