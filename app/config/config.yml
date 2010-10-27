@@ -26,7 +26,6 @@ test:
     host: localhost
     database: app_test
     username: root
-    password: secret
 
 production:
   db:
@@ -34,7 +33,6 @@ production:
     host: localhost
     database: app_production
     username: root
-    password: secret
 
 
 analytics:
