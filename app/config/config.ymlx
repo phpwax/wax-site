@@ -1,0 +1,115 @@
+##### config.yml file use to configure applications ###
+# Environments: Setup ip sniffing to detect environments
+#
+#  Hopefully entirely unnecessary most of the time -
+#  Local ranges 127., 10. and 192. default to development
+
+
+# environments:
+#   development:  172.*
+#   production:   86.54.101.70
+
+
+
+# == Database configuration ==
+development:
+ db:
+  dbtype: none
+  host: localhost
+  database: app_development
+  username: root
+  password: secret
+
+test:
+  db:
+    dbtype: mysql
+    host: localhost
+    database: app_test
+    username: root
+
+production:
+  db:
+    dbtype: mysql
+    host: localhost
+    database: app_production
+    username: root
+
+
+analytics:
+  email:
+  password:
+  id:
+  tracker_id:
+
+
+#  == Maintenance downtime == 
+#  Use to make the site unavailable to all but one ip
+#  Just comment the lines out to operate the site normally. Note that this will need to be your public ip address.
+#  Redirect gives an address to redirect all requests to.
+#  the ip can be a yaml array or a single ip - both regex 
+#maintenance: 
+  #ip:       ^127.0.0*
+  #redirect: 503.html
+
+
+
+# == CACHE ==
+# To speed up page loads you can enable caching for certain elements within phpwax. All will take white or
+# black lists (inclusions / exclusions) in the form of regular expressions (passed to a preg_match call).
+#
+# I would suggest that anything you turn on here you set to false in development.php with a Config::set() call
+# in order to avoid seeing cached content while working locally!
+#
+# layout_cache:
+#  This will cache the entire page and if used properly can load the entire page request from cache with no
+#  need to load in the framework; just a few dependancies
+#
+# view_cache
+#  While turned on individual views can be cached, so when the template is rendered the view is simply read 
+#  from cache and does not have to parse the view
+#
+# partial_cache
+#  Much like view_cache, only for partial calls
+#
+# image_cache
+#  Currently specific to the show_image function that comes with Wildfire CMS; but using this
+#  will use the cached versions of image files instead of having to render them in the framework
+# ====
+
+#layout_cache:
+  #engine: "File"
+  #exclude_post: "yes"
+  #exclusions:
+    #contact: "/contact/i"
+    #admin: "/admin/i"
+
+#view_cache:
+  #engine: "File"
+  #exclude_post: "yes"
+  #exclusions:
+    #contact: "/contact/i"
+    #admin: "/admin/i"
+
+# If your using wildfire cms, you might want to turn this on... so show image
+# requests it doesnt have to load the entire framework 
+#image_cache:
+  #lifetime: "forever"
+  #engine: "Image"
+  #exclude_post: "no"    
+
+# alternative domains to serve content from - this done via a post render hook,
+# which parses the content - make sure its not set to false in the development.php 
+# or production.php 
+#randomise_domains:
+  #exclusions:
+    #admin:"/admin/i"
+  #replace:
+    #0: "/<link[^>]*href=\"(\/.*?)\" type=\"text\/css\"[^>]*>/i"
+    #1: "/<img[^>]*src=\"(\/.*?)\"[^>]*>/i"
+    #2: "/<script[^>]*src=\"(\/.*?)\"[^>]*>/i"
+  #available_domains:
+    #0: "static1.domain.name"
+    #1: "static2.domain.name"
+    #2: "static3.domain.name"
+    #3: "static4.domain.name"
+    #4: "static5.domain.name"
