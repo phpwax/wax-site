@@ -1,7 +1,7 @@
 capfile
 wax
 wax/
-plugins/cms*
+plugins/*
 public/files/
 .DS_Store
 tmp/
