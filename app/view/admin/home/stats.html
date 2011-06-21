@@ -1,0 +1,18 @@
+<div>
+  <?if($current_user->access($module_name,"stats")):?>
+    <h2>Your Site's Performance</h2>
+  
+    <h3>Recent Visits and Page Views</h3>
+    <img src="/images/sample_stats.png" width="334" height="171" alt="Sample Stats">
+    
+    <div class="clearfix"></div>
+  
+  
+    <h3>Recent Incoming Links</h3>
+    <p><strong>Your site has not yet been setup to track your visitors</strong><br />Your recent incoming links will appear here shortly.</p>
+  
+    <div class="clearfix"></div>
+    <h3>Recent Search Referrals</h3>
+    <p><strong>Your site has not yet been setup to track your visitors</strong><br />Your recent search engine referrals will appear here shortly.</p>  
+  <?endif?>
+</div>

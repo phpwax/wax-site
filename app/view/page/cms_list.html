@@ -1,0 +1,21 @@
+<h1><?=$cms_section->title?></h1>
+
+<?if($cms_section->introduction):?><p><?=$cms_section->introduction?></p><?endif?>
+<hr />
+  <?foreach($cms_content as $count=>$content):?>
+  <div class='row full clearfix'>
+    <h2><a href="<?=$content->permalink?>" title='<?=str_replace(" & ", " &amp; ", $content->title)?>' class='padded'><?=str_replace(" & ", " &amp; ", $content->title)?></a></h2>
+      <?if($content->images && $content->images[0] && $content->images[0]->primval):?>
+      <div class='image_holder'>
+        <a href="<?=$content->permalink?>" title='<?=str_replace(" & ", " &amp; ", $content->title)?>' class='img_link'><img src="<?=$content->images[0]->permalink(100)?>" alt="image for <?=str_replace(" & ", " &amp; ", $content->title)?>" class='attached'/></a>
+      </div>
+      <?endif?>
+    <?=word_truncation($content->format_content(), 30)?>
+  </div>
+  <?endforeach?>
+
+<?if($cms_content->total_pages > 1):?>
+<div class='row pagination_container full clearfix'>
+  <?=paginate_links($cms_content, "2")?>
+</div>
+<?endif?>
