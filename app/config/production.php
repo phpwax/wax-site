@@ -7,7 +7,8 @@
 Config::set("log_info", false);
 Config::set("log_warn", false);
 Config::set("log_error", true);
-Config::set('randomise_domains', false);
+
+//Config::set('randomise_domains', false); //cache setting
 
 /************ Application Error Handling *******************************************************
 *
@@ -18,8 +19,7 @@ Config::set('randomise_domains', false);
 *  Both of these can be either actions in your application or static pages.
 *  
 *  Finally email_on_error accepts an email address and email_subject_on_error a text subject.
-*  If these are set a copy of the error trace will be emailed to the address. 
-*/
+*  If these are set a copy of the error trace will be emailed to the address. */
 
 WXRoutingException::$redirect_on_error = "/404.html"; // Page not found error
 
