@@ -1,27 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="auhtor" content="charles marshall for One Black Bear"/>
-	<meta name="keywords" content="B-Hive, Birmingham, designer, top agency, pr, placement, creative, high profile, pitch, unsuitable, marketing birmingham, marketing"/>
-	<meta name="description" content="Are you a budding pr or designer aspiring to work in a top agency? Here's your chance to win a paid work placement at one of the region's best. There are two categories: PR and Design."/>
-	<meta name="verify-v1" content="9jM3A+FQe3avYfCCU+bcjZzHxPucsYYE39/7bXSghP0=" />
-	
-	<link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" media="screen" charset="utf-8" />
-	<link rel="icon" type="image/gif" href="/favicon.ico" />
-	
-	<script src='http://www.google.co.uk/jsapi?'  type='text/javascript'></script>	
-  <script type='text/javascript'>                      
-  google.load('jquery', '1');
-  </script>
-	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
-	
-	
-
-	<title>Test CMS Site</title>
-	
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <?=css_bundle("core")?>	
+  <title>Test CMS Site</title>
 </head>
 
 <body id="<?=$action?>">
@@ -39,5 +20,21 @@
 	  
 	</div>
 	
+<script src="http://www.google.com/jsapi"></script>
+<script>google.load("jquery", "1");</script>
+<?=js_bundle("core")?>
+<script type="text/javascript">
+var tracker_id = "<?=Config::get('analytics/tracker_id')?>";
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', tracker_id]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');     ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+})();
+</script>
 </body>
 </html>

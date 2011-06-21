@@ -1,4 +1,7 @@
 <?
+//$engine = "BackgroundFile";
+//$life = (60*60*24*365*10); //10 years - will be using expiry queue
+
 Config::$config_array = array(
   "repo_branch"=>"master",
   "development"=>array(
@@ -40,8 +43,8 @@ Config::$config_array = array(
   //  ""=> ""
   //),
   //"layout_cache"=>array(
-  //  "lifetime"=>60*60*24, //1 day
-  //  "engine"=>"BackgroundFile",
+  //  "lifetime"=>$life,
+  //  "engine"=> $engine,
   //  "exclude_post"=>"yes",
   //  "exclusions"=>array(
   //    "admin"=> "/(admin)/i",
