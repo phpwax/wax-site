@@ -1,19 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <!--
 	terrafirma1.0 by nodethirtythree design
 	http://www.nodethirtythree.com	
 -->
 <!-- MODIFIED FOR PHPWAX EXAMPLE SITE -->
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>Basic Site</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="author" content="nodethirtythree - modified by OneBlackBear" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/core.css" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
-
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <?=css_bundle("core")?>
+  <title>Basic Site</title>
 </head>
 <body>
 
@@ -61,5 +56,21 @@
 
 </div>
 
+<script src="http://www.google.com/jsapi"></script>
+<script>google.load("jquery", "1");</script>
+<?=js_bundle("core")?>
+<script type="text/javascript">
+var tracker_id = "<?=Config::get('analytics/tracker_id')?>";
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', tracker_id]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');     ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+})();
+</script>
 </body>
 </html>

@@ -38,37 +38,20 @@ if(is_dir(WAX_ROOT."wax")) {
 }
 ini_set('include_path', ini_get("include_path").":".WAX_ROOT);
 require_once(FRAMEWORK_DIR."/AutoLoader.php");
-/*********************************************************************************************/
 
+define('CACHE_DIR', WAX_ROOT.'tmp/cache/');
+require_once FRAMEWORK_DIR.'/utilities/Session.php';
 
-
-/************ Application Error Handling *******************************************************
-*
-*  When you're running in production mode, you don't want your errors displayed to users.
-*  The following commands can be uncommented to handle errors professionally.
-*  Firstly the routing redirect_on_error gives a location for a 404 error (page not found)
-*  The second redirect_on_error is an application error page.
-*  Both of these can be either actions in your application or static pages.
-*  
-*  Finally email_on_error accepts an email address and email_subject_on_error a text subject.
-*  If these are set a copy of the error trace will be emailed to the address. */
-
-//WXRoutingException::$redirect_on_error = "/404.html"; // Page not found error
-
-// Application Error and an email address and subject to send details to.
-//WXException::$redirect_on_error = "/error.html";
-//WXException::$email_on_error="";
-//WXException::$email_subject_on_error="";
-/*********************************************************************************************/
-
-
+//start session here!
+/* uncomment for cache
+if($_SERVER['REMOTE_ADDR']) Session::start();
+if($_SERVER['REMOTE_ADDR'] && WaxCacheLoader::valid()){
+	echo WaxCacheLoader::get();
+	exit;
+}
+*/
 /*********************************************************************************************/
 
 /*********** Your Additional Application Configuration ***************************************
 *  This file is run at boot time so if you want to set any systemwide configuration values, 
 *  you can do so below this point */
-
-
-
-
-
