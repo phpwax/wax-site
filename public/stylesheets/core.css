@@ -102,9 +102,6 @@ form fieldset fieldset label { margin-left: 123px; } /* Width plus 3 (html space
 /**** DATE PICKER ***/
 #ui-datepicker-div{background:white;}
 
-
-/********/
-
 /* Nasty clearfix hacks */
 .clearfix {display:inline-block;} 
 /* Hide from IE Mac \*/ 
