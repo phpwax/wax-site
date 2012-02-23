@@ -13,7 +13,8 @@ set :build_to,    "."
 set :databases,   ["#{application}"]
 set :aliases,     ["www.#{application}.com"]
 set :phpwax,      "v3.1"
-set :cms,         "v6.pretty"
+set :cms,         "v7"
+set :plugins,     ["cms"]
 
 desc "Sets up variables to deploy to the beta server, run this just before the other command you want, e.g. cap beta deploy"
 task :beta do
