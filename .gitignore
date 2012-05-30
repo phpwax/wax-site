@@ -1,0 +1,11 @@
+public/files/
+.DS_Store
+tmp/
+!tmp/cache
+!tmp/log
+public/javascripts/build/
+public/stylesheets/build/
+public/javascripts/build
+public/stylesheets/build
+public/beerimages/
+public/downloads/

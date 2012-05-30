@@ -1,0 +1,36 @@
+require 'rubygems'
+require 'obbistrano'
+
+# =============================================================================
+# REQUIRED VARIABLES
+# =============================================================================
+# You must always specify the application and repository for every recipe. The
+# repository must be the git URL of the repository you want this recipe to
+# correspond to. The deploy_to path must be the path on each machine that will
+# form the root of the application path.
+
+set :application, "wax4test"
+role :web,        "obb12.oneblackbear.com"
+role :host,        "obb12.oneblackbear.com"
+set :user,        "#{application}"
+set :password,    "wax4test"
+set :repository,  "git@github.com:phpwax/wax4test.git"
+
+
+# =============================================================================
+# OPTIONAL VARIABLES
+# =============================================================================
+set :branch,      "master"
+set :deploy_to,   "."
+set :databases,   ["#{application}"]
+set :aliases,     []
+
+# =============================================================================
+# CUSTOM TASKS
+# =============================================================================
+# Define tasks that run on all (or only some) of the machines. You can specify
+# a role (or set of roles) that each task should be executed on. You can also
+# narrow the set of servers to a subset of a role by specifying options, which
+# must match the options given for the servers to select (like :primary => true)
+
+

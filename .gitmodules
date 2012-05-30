@@ -1,0 +1,6 @@
+[submodule "wax"]
+	path = wax
+	url = git://github.com/phpwax/phpwax.git
+[submodule "plugins/cms"]
+	path = plugins/cms
+	url = git://github.com/phpwax/wildfire.git
