@@ -1,0 +1,33 @@
+{
+    "name": "oneblackbear/obb",
+    "authors": [
+        {
+            "name": "X",
+            "email": "X@Y.com"
+        }
+    ],
+    "require": {
+            "php": ">=5.3",
+            "phpwax/phpwax": "3.2.*"
+            /*,
+            "phpwax/backgroundcurl": "7.1.*",
+            "phpwax/wildfire": "7.1.*",
+            "phpwax/wildfire.interface": "7.1.*",
+            "phpwax/wildfire.categories": "7.1.*",
+            "phpwax/wildfire.redirects": "7.1.*",
+            "phpwax/wildfire.meta": "7.1.*",
+            "phpwax/wildfire.rss": "7.1.*",
+            "phpwax/wildfire.sitemap": "7.1.*",
+            "phpwax/wildfire.navigation": "7.1.*",
+            "phpwax/wildfire.cms_static_cache": "7.1.*",
+            "phpwax/wildfire.formbuilder": "7.1.*"
+            */
+
+      },
+      "minimum-stability": "dev",
+      "autoload": {
+        "classmap": [
+          "app/model", "app/controller", "app/lib"
+        ]
+      }
+}
