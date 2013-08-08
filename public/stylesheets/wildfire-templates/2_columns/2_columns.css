@@ -1,0 +1,14 @@
+.two_column_section{
+  margin-bottom:20px;
+}
+
+.two_column_section .column{
+  float:left;
+  width:48%;
+  margin-left:2%;
+}
+
+.two_column_section .first{
+  margin-left:0;
+  margin-right:2%;
+}

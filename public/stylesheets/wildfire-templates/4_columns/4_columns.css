@@ -1,0 +1,12 @@
+.four_column_section{
+  margin-bottom:20px;
+}
+
+.four_column_section .column{
+  float:left;
+  width:22%;
+  margin-left:4%;
+}
+.four_column_section .first{
+  margin-left:0;
+}

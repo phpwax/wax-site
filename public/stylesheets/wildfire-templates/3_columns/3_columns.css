@@ -1,0 +1,15 @@
+.three_column_section{
+  margin-bottom:20px;
+}
+
+.three_column_section .column{
+  float:left;
+  width:32%;
+  margin-left:0;
+  margin-right:0;
+}
+
+.three_column_section .middle{
+  margin-left:2%;
+  margin-right:2%;
+}
