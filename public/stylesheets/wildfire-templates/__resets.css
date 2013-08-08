@@ -65,8 +65,18 @@ p{
   margin-bottom: 20px;
 }
 /*used instead of last para*/
-p.highlight_para{}
+p.highlight_para{
+  /*normally bigger font size*/
+}
 
 p:last-child{
   margin-bottom:0;
 }
+
+/* ONLY USED IN THE CMS EDITOR, SHOULD BE FILTERED OUT IN FRONT END */
+.__t__{
+  margin-top:10px;
+  margin-bottom:10px;
+  border:4px solid #000;
+}
+/*********************************************************************/
