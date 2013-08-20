@@ -11,3 +11,5 @@ public/files/*
 
 public/javascripts/build
 public/stylesheets/build
+
+vendor/*
